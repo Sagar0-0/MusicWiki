@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.musicwiki.R
 
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class AlbumsListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

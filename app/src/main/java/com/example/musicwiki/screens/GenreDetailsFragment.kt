@@ -11,6 +11,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.musicwiki.R
 import kotlinx.android.synthetic.main.fragment_genre_details.view.*
 
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class GenreDetailsFragment : Fragment() {
 
     val args: GenreDetailsFragmentArgs by navArgs()

@@ -6,6 +6,7 @@
     tools:context=".screens.ArtistsListFragment">
 
     <TextView
+        android:id="@+id/artistText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Artists list will be here" />

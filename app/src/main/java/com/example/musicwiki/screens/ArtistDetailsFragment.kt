@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.musicwiki.R
 
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 class ArtistDetailsFragment : Fragment() {
-    // TODO: Rename and change types of parameter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
