@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MusicWiki</string>
+    <string name="hello_main_fragment">Hello Main fragment</string>
+    <string name="hello_genre_details_fragment">Hello Genre Details fragment</string>
 </resources>
