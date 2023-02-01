@@ -2,4 +2,6 @@
     <string name="app_name">MusicWiki</string>
     <string name="hello_main_fragment">Hello Main fragment</string>
     <string name="hello_genre_details_fragment">Hello Genre Details fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

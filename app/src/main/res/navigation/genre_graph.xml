@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/genre_graph"
+    app:startDestination="@id/albumListFragment">
+
+    <fragment
+        android:id="@+id/albumListFragment"
+        android:name="com.example.musicwiki.screens.AlbumsListFragment"
+        android:label="fragment_album_list"
+        tools:layout="@layout/fragment_album_list">
+        <action
+            android:id="@+id/action_albumListFragment_to_albumDetailsFragment"
+            app:destination="@id/albumDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistsListFragment"
+        android:name="com.example.musicwiki.screens.ArtistsListFragment"
+        android:label="fragment_artists_list"
+        tools:layout="@layout/fragment_artists_list">
+        <action
+            android:id="@+id/action_artistsListFragment_to_artistDetailsFragment"
+            app:destination="@id/artistDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tracksListFragment"
+        android:name="com.example.musicwiki.screens.TracksListFragment"
+        android:label="fragment_tracks_list"
+        tools:layout="@layout/fragment_tracks_list" />
+    <fragment
+        android:id="@+id/albumDetailsFragment"
+        android:name="com.example.musicwiki.screens.AlbumDetailsFragment"
+        android:label="fragment_album_details"
+        tools:layout="@layout/fragment_album_details" />
+    <fragment
+        android:id="@+id/artistDetailsFragment"
+        android:name="com.example.musicwiki.screens.ArtistDetailsFragment"
+        android:label="fragment_artist_details"
+        tools:layout="@layout/fragment_artist_details" />
+</navigation>

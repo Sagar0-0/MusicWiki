@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.musicwiki.screens.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/to_genreDetails"
+            app:destination="@id/genreDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreDetailsFragment"
+        android:name="com.example.musicwiki.screens.GenreDetailsFragment"
+        android:label="fragment_genre_details"
+        tools:layout="@layout/fragment_genre_details">
+        <argument
+            android:name="genreName"
+            app:argType="string" />
+    </fragment>
+</navigation>

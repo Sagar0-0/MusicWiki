@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/albumListFragment"
+        android:icon="@drawable/ic_baseline_album_24"
+        android:title="Albums" />
+    <item
+        android:id="@+id/artistsListFragment"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="Artists" />
+    <item
+        android:id="@+id/tracksListFragment"
+        android:icon="@drawable/ic_baseline_album_24"
+        android:title="Tracks" />
+</menu>
