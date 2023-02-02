@@ -4,24 +4,37 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.setupWithNavController
 import com.example.musicwiki.R
+import com.example.musicwiki.data.remote.model.TestObject
+import com.example.musicwiki.utils.Status
+import com.example.musicwiki.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_genre_details.*
 import kotlinx.android.synthetic.main.fragment_genre_details.view.*
 
 @AndroidEntryPoint
 class GenreDetailsFragment : Fragment() {
 
-    val args: GenreDetailsFragmentArgs by navArgs()
+    private val viewModel: MainViewModel by viewModels()
+    private val args: GenreDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_genre_details, container, false)
+
+        val tag = args.genreName
+        view.genre_title_text.text = tag
+        viewModel.getTagInfo(tag)
+        subscribeToObservers(view.genre_description_text)
 
         val nestedNavHostFragment =
             childFragmentManager.findFragmentById(R.id.genreFragmentContainer) as? NavHostFragment
@@ -30,4 +43,19 @@ class GenreDetailsFragment : Fragment() {
         return view
     }
 
+    private fun subscribeToObservers(view: TextView) {
+        viewModel.tagInfo.observe(viewLifecycleOwner) {
+            when (it.status) {
+                Status.SUCCESS -> {
+                    view.text = it.data
+                }
+                Status.LOADING -> {
+                    view.text = "Loading..."
+                }
+                Status.ERROR -> {
+                    view.text = "Can not retrieve content at this moment"
+                }
+            }
+        }
+    }
 }

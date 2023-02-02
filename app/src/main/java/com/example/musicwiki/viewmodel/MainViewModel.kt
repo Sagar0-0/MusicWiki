@@ -19,6 +19,9 @@ class MainViewModel @Inject constructor(
     private val _tagsList = MutableLiveData<Resource<List<Tag>>>()
     val tagsList : LiveData<Resource<List<Tag>>> = _tagsList
 
+    private val _tagInfo = MutableLiveData<Resource<String>>()
+    val tagInfo : LiveData<Resource<String>> = _tagInfo
+
     init{
         getTags()
     }
@@ -26,17 +29,15 @@ class MainViewModel @Inject constructor(
     private fun getTags() {
         _tagsList.value = Resource.loading()
         viewModelScope.launch {
-            val response = repository.getTopTags()
-            _tagsList.value = response
+            _tagsList.value = repository.getTopTags()
         }
     }
-//    fun getAlbum(tag: String) {
-//        _tagsList.value = Resource.loading()
-//        viewModelScope.launch {
-//            val response = repository.getTopTags()
-//            _tagsList.value = response
-//        }
-//    }
+    fun getTagInfo(tag: String) {
+        _tagInfo.value = Resource.loading()
+        viewModelScope.launch {
+            _tagInfo.value = repository.getTagInfo(tag)
+        }
+    }
 
 
 }
