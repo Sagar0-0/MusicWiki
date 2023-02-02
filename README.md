@@ -13,7 +13,7 @@
 ## UI
 HomeScreen | Albums Tab | Artists Tab | Tracks Tab
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------: 
-![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)
+![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)|![Screenshot_20230202_230242](https://user-images.githubusercontent.com/85388413/216399165-381fcadd-d39e-40b7-a8a9-08145baea3ca.png)|![Screenshot_20230202_230300](https://user-images.githubusercontent.com/85388413/216399187-eefac7f2-e030-4344-8ad6-83f207052e8d.png)
 
 
 
@@ -30,3 +30,10 @@ HomeScreen | Albums Tab | Artists Tab | Tracks Tab
 - [Jetpack Navigation component](https://developer.android.com/guide/navigation?gclsrc=ds&gclsrc=ds) to navigate easily from one Screen to another.
 - [Timber](https://github.com/JakeWharton/timber) for logging.
 - Truth, JUnit, Robolectric for Testing.(Still pending)
+
+## Issues/TODOs
+- Using single adapter for all fragments
+- Adapter should be Injected with Hilt
+- Using a temp object to hold just String and Image for all list items
+- Using one viewmodel for all fragments
+- Would love to migrate to Compose(much easier as compared to XML)
