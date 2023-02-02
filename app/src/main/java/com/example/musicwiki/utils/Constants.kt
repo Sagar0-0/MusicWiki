@@ -1,5 +1,6 @@
 package com.example.musicwiki.utils
 
+//TODO make object class
 const val API_KEY = "7e17f6502f08615dc727c65d7f62ff81"
 const val query_top_tags = "tag.getTopTags"
 const val response_format = "json"

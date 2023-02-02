@@ -7,6 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NetworkApi {
+    // TODO /2.0/
     @GET("2.0")
     suspend fun getTopTags(
         @Query("method")
