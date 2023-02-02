@@ -11,7 +11,7 @@
   - Tracks: Show all tracks related to particular Genre.
 
 ## UI
-HomeScreen | Albums | Artists | Tracks
+HomeScreen | Albums Tab | Artists Tab | Tracks Tab
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------: 
 ![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)
 
