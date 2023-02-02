@@ -13,7 +13,9 @@
 ## UI
 HomeScreen | Albums Tab | Artists Tab | Tracks Tab
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------: 
-![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)
+![Screenshot_20230202_214824](https://user-images.githubusercontent.com/85388413/216382388-8ca4f68d-71f7-4c3a-b4b2-0d20e52ce659.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)|![Screenshot_20230202_223611](https://user-images.githubusercontent.com/85388413/216393224-1b73c730-0287-4c0c-803d-05c7d6adbd98.png)
+
+
 
 ## Libraries/Principles used: 
 - [Kotlin](https://kotlinlang.org/) as the Primary Language.
