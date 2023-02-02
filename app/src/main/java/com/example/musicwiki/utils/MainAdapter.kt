@@ -8,18 +8,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.musicwiki.R
-import com.example.musicwiki.data.remote.model.TestObject
+import com.example.musicwiki.data.remote.model.TempObject
 
 
 // TODO Don't take onClick in constructor
-class MainAdapter(private val onClick: (TestObject) -> Unit) :
+class MainAdapter(private val onClick: (TempObject) -> Unit) :
     RecyclerView.Adapter<MainAdapter.ItemViewHolder>() {
 
-    class ItemViewHolder(itemView: View, val onClick: (TestObject) -> Unit) :
+    class ItemViewHolder(itemView: View, val onClick: (TempObject) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
         private val textView: TextView = itemView.findViewById(R.id.item_text)
         private val imageView: ImageView = itemView.findViewById(R.id.item_image)
-        private var current: TestObject? = null
+        private var current: TempObject? = null
 
         init {
             itemView.setOnClickListener {
@@ -30,16 +30,16 @@ class MainAdapter(private val onClick: (TestObject) -> Unit) :
         }
 
         /* Bind item name and image. */
-        fun bind(oneItem: TestObject) {
+        fun bind(oneItem: TempObject) {
             current = oneItem
             textView.text = oneItem.name
             Glide.with(imageView).load(oneItem.image).into(imageView)
         }
     }
 
-    var list: MutableList<TestObject> = mutableListOf()
+    var list: MutableList<TempObject> = mutableListOf()
 
-    fun changeList(newList: List<TestObject>) {
+    fun changeList(newList: List<TempObject>) {
         list.clear()
         list.addAll(newList)
         notifyDataSetChanged()

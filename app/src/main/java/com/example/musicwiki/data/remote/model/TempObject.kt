@@ -1,6 +1,6 @@
 package com.example.musicwiki.data.remote.model
 
-data class TestObject(
+data class TempObject(
     val name: String,
     val image: String
 )

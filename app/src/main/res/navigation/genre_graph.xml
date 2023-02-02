@@ -11,7 +11,7 @@
         android:label="fragment_album_list"
         tools:layout="@layout/fragment_album_list">
         <action
-            android:id="@+id/action_albumListFragment_to_albumDetailsFragment"
+            android:id="@+id/to_albumDetailsFragment"
             app:destination="@id/albumDetailsFragment" />
     </fragment>
     <fragment
@@ -20,7 +20,7 @@
         android:label="fragment_artists_list"
         tools:layout="@layout/fragment_artists_list">
         <action
-            android:id="@+id/action_artistsListFragment_to_artistDetailsFragment"
+            android:id="@+id/to_artistDetailsFragment"
             app:destination="@id/artistDetailsFragment" />
     </fragment>
     <fragment
@@ -32,7 +32,11 @@
         android:id="@+id/albumDetailsFragment"
         android:name="com.example.musicwiki.screens.AlbumDetailsFragment"
         android:label="fragment_album_details"
-        tools:layout="@layout/fragment_album_details" />
+        tools:layout="@layout/fragment_album_details" >
+        <argument
+            android:name="artistName"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/artistDetailsFragment"
         android:name="com.example.musicwiki.screens.ArtistDetailsFragment"

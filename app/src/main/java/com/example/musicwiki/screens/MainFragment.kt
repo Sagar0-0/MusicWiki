@@ -1,7 +1,6 @@
 package com.example.musicwiki.screens
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +10,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.musicwiki.R
-import com.example.musicwiki.data.remote.model.TestObject
+import com.example.musicwiki.data.remote.model.TempObject
 import com.example.musicwiki.utils.MainAdapter
 import com.example.musicwiki.utils.Status
 import com.example.musicwiki.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main.view.*
-import timber.log.Timber
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -49,12 +46,13 @@ class MainFragment : Fragment() {
             when (it.status) {
                 Status.SUCCESS -> {
                     val newList = it.data!!.map { tag ->
-                        TestObject(tag.name, "https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000")
+                        TempObject(tag.name, "https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000")
                     }
                     myAdapter.changeList(newList)
+                    Toast.makeText(requireContext(), "Retrieve successful", Toast.LENGTH_SHORT).show()
                 }
                 Status.LOADING -> {
-                    Toast.makeText(requireContext(), "Loading...", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "Loading...", Toast.LENGTH_SHORT).show()
                 }
                 Status.ERROR -> {
                     Toast.makeText(requireContext(), it.message!!, Toast.LENGTH_LONG).show()

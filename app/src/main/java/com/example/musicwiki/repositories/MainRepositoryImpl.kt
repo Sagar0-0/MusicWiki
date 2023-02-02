@@ -18,9 +18,9 @@ class MainRepositoryImpl @Inject constructor(
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it.toptags.tag)
-                } ?: Resource.error("Unknown Error occurred")
+                } ?: Resource.error("Body is empty")
             }else{
-                Resource.error("Unknown Error occurred")
+                Resource.error("Response is not successful")
             }
         } catch (e: Exception) {
             Resource.error("Couldn't reach the server. Check Internet connection")
@@ -33,9 +33,9 @@ class MainRepositoryImpl @Inject constructor(
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it.tag.wiki.content)
-                } ?: Resource.error("Unknown Error occurred")
+                } ?: Resource.error("Body is empty")
             }else{
-                Resource.error("Unknown Error occurred")
+                Resource.error("Response is not successful")
             }
         } catch (e: Exception) {
             Resource.error("Couldn't reach the server. Check Internet connection")
@@ -48,9 +48,9 @@ class MainRepositoryImpl @Inject constructor(
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it.albums.album)
-                } ?: Resource.error("Unknown Error occurred")
+                } ?: Resource.error("Body is empty")
             }else{
-                Resource.error("Unknown Error occurred")
+                Resource.error("Response is not successful")
             }
         } catch (e: Exception) {
             Resource.error("Couldn't reach the server. Check Internet connection")
@@ -63,9 +63,9 @@ class MainRepositoryImpl @Inject constructor(
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it.tracks.track)
-                } ?: Resource.error("Unknown Error occurred")
+                } ?: Resource.error("Body is empty")
             }else{
-                Resource.error("Unknown Error occurred")
+                Resource.error("Response is not successful")
             }
         } catch (e: Exception) {
             Resource.error("Couldn't reach the server. Check Internet connection")
@@ -78,9 +78,9 @@ class MainRepositoryImpl @Inject constructor(
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it.topartists.artist)
-                } ?: Resource.error("Unknown Error occurred")
+                } ?: Resource.error("Body is empty")
             }else{
-                Resource.error("Unknown Error occurred")
+                Resource.error("Response is not successful")
             }
         } catch (e: Exception) {
             Resource.error("Couldn't reach the server. Check Internet connection")

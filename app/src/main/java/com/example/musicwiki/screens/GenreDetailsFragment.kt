@@ -5,24 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.setupWithNavController
 import com.example.musicwiki.R
-import com.example.musicwiki.data.remote.model.TestObject
 import com.example.musicwiki.utils.Status
 import com.example.musicwiki.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_genre_details.*
 import kotlinx.android.synthetic.main.fragment_genre_details.view.*
 
 @AndroidEntryPoint
 class GenreDetailsFragment : Fragment() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModel by activityViewModels()
     private val args: GenreDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -34,6 +31,9 @@ class GenreDetailsFragment : Fragment() {
         val tag = args.genreName
         view.genre_title_text.text = tag
         viewModel.getTagInfo(tag)
+        viewModel.getAlbums()
+        viewModel.getArtists()
+        viewModel.getTracks()
         subscribeToObservers(view.genre_description_text)
 
         val nestedNavHostFragment =
