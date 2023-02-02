@@ -13,15 +13,15 @@
 ## UI
 
 ## Libraries/Principles used: 
-- Kotlin as the Primary Language.
-- Fragments to display reflixible UI.
-- Coroutines for writing asynchronous non-blocking code.
-- ViewModel as a single source of truth.
-- Single Activity Pattern for best practices.
-- MVVM for the clean and recommended architecture of app.
-- Retrofit to fetch data from Last.fm API.
-- Hilt for dependency injection.
-- Glide to load images in UI.
-- Jetpack Navigation component to navigate easily from one Screen to another.
+- [Kotlin](https://kotlinlang.org/) as the Primary Language.
+- [Fragments](https://developer.android.com/guide/fragments) to display reflixible UI.
+- [Coroutines](https://developer.android.com/kotlin/coroutines?gclsrc=ds&gclsrc=ds) for writing asynchronous non-blocking code.
+- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel?gclsrc=ds&gclsrc=ds) as a single source of truth.
+- [Single Activity Pattern](https://www.youtube.com/watch?v=2k8x8V77CrU) for best practices.
+- [MVVM](https://developer.android.com/topic/architecture?gclsrc=ds&gclsrc=ds) for the clean and recommended architecture of app.
+- [Retrofit](https://square.github.io/retrofit/) to fetch data from Last.fm API.
+- [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) for dependency injection.
+- [Glide](https://github.com/bumptech/glide) to load images in UI.
+- [Jetpack Navigation component](https://developer.android.com/guide/navigation?gclsrc=ds&gclsrc=ds) to navigate easily from one Screen to another.
+- [Timber](https://github.com/JakeWharton/timber) for logging.
 - Truth, JUnit, Robolectric for Testing.(Still pending)
-- Timber for logging.
