@@ -27,10 +27,4 @@ object AppModule {
             .error(R.drawable.ic_launcher_background)
     )
 
-    @Singleton
-    @Provides
-    fun provideAdapter(
-        glide: RequestManager
-    ) = MainAdapter(glide)
-
 }

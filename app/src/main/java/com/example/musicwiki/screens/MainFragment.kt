@@ -1,6 +1,7 @@
 package com.example.musicwiki.screens
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,13 +17,15 @@ import com.example.musicwiki.utils.Status
 import com.example.musicwiki.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main.view.*
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private val viewModel: MainViewModel by viewModels()
-    @Inject
+
+    // TODO use hilt
     lateinit var myAdapter: MainAdapter
 
     override fun onCreateView(
@@ -31,7 +34,7 @@ class MainFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
         subscribeToObservers()
-        myAdapter.clickListener = {
+        myAdapter = MainAdapter{
             findNavController().navigate(MainFragmentDirections.toGenreDetails(it.name))
         }
         view.genreRecyclerView.apply {
@@ -45,12 +48,10 @@ class MainFragment : Fragment() {
         viewModel.tagsList.observe(viewLifecycleOwner) {
             when (it.status) {
                 Status.SUCCESS -> {
-                    Toast.makeText(requireContext(), "Got Result", Toast.LENGTH_LONG).show()
-                    it.data?.let { list ->
-                        myAdapter.changeList(list.map { tag ->
-                            TestObject(tag.name, "")
-                        })
+                    val newList = it.data!!.map { tag ->
+                        TestObject(tag.name, "https://img.freepik.com/free-vector/music-vinyl-record-label-with-sound-notes_1017-33905.jpg?w=2000")
                     }
+                    myAdapter.changeList(newList)
                 }
                 Status.LOADING -> {
                     Toast.makeText(requireContext(), "Loading...", Toast.LENGTH_LONG).show()
