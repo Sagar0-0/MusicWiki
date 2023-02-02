@@ -9,9 +9,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.setupWithNavController
 import com.example.musicwiki.R
-import kotlinx.android.synthetic.main.fragment_genre_details.view.*
-
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_genre_details.view.*
 
 @AndroidEntryPoint
 class GenreDetailsFragment : Fragment() {
@@ -22,7 +21,6 @@ class GenreDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_genre_details, container, false)
 
         val nestedNavHostFragment =
